@@ -1,8 +1,11 @@
+head {
+    text-align: center;
+}
 body {
     font-family: Times 'Times New Roman', Times, serif, Helvetica, sans-serif;
     text-align: left;
 }
 
 img {
-    height: 200px;
+    height: 230px;
 }
