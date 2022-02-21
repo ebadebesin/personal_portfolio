@@ -5,7 +5,7 @@ body {
     font-family: Times 'Times New Roman', Times, serif, Helvetica, sans-serif;
     text-align: left;
     color:rgb(24, 4, 54);
-    background-color: rgb(136, 165, 192);
+    background-color: rgba(136, 165, 192, 0.63);
     height: 125vh;  
     margin-top: 80px;  
     padding: 30px;  
@@ -26,7 +26,7 @@ header::after {
 
 header
 {
-    background-color: white;
+    background-color: rgb(53, 39, 170);
     position: fixed;  
     left: 0;  
     right: 0;  
@@ -44,7 +44,7 @@ header li {
     margin: 20px;  
 }  
 header li a {  
-    color: blue;  
+    color: white;  
     text-decoration: none;  
 }  
 
@@ -71,7 +71,7 @@ nav ul{
 
 nav li{
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 60px;
 
     position: relative;
     
