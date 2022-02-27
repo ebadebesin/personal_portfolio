@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="styles.css">
     <h1>Ebun Blessing Adebesin</h1>
 
+   <!-- <script>
+        function darkMode() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        
+    </script>-->
+
 
 </head>
 
 <header>
+    
+    
+    
     <div class ="nav">
         <img src = "PortLogo.png" alt="logo" class="logo">
 
@@ -27,9 +38,15 @@
                     <a href= "experience.html"><span>Experience</span></a>
                 </li>
                 <li>
-                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"><span>Resume</span></a>
+                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing" target="_blank" >Resume</a>
+                </li>
+                <li>
+                    <div id="toggle">
+        <i class="indicator"><span>mode</span></i>
+    </div>
                 </li>
 
+               <!-- <span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
             </ul>
         </nav>
 
@@ -39,9 +56,9 @@
 
     
 <body>
-
-
-    <img src="logo.jpg"></img>
+    
+    
+    <img src="logo.jpg" alt="headShot" class="headShot"></img>
     
     <p>
 
@@ -57,7 +74,29 @@
 
     </p>
 
+
+
+    <script>
+        const body = document.querySelector('body');
+        const toggle = document.getElementById('toggle');
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            body.classList.toggle('active');
+        }
+    </script>
+<!--<script>
+    function theGreatest() {
+      var x = document.getElementById("nav");
+      if (x.className === "nav") {
+        x.className += "responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+</script>-->
+
 </body>
+
 
 <footer>
 
