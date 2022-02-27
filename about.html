@@ -6,6 +6,13 @@
     <title>Ebun Adebesin's Portfolio</title>
     
     <link rel="stylesheet" href="styles.css">
+    <!--<script>
+        function darkMode() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        
+    </script>-->
     <h1>About</h1>
 
 
@@ -27,9 +34,14 @@
                     <a href= "experience.html"><span>Experience</span></a>
                 </li>
                 <li>
-                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"><span>Resume</span></a>
+                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"target="_blank" >Resume</a>
                 </li>
-
+                <li>
+                    <div id="toggle">
+        <i class="indicator"><span>mode</span></i>
+    </div>
+                </li>
+                <!--<span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
             </ul>
         </nav>
 
@@ -41,7 +53,7 @@
 <body>
 
 
-    <h2 style="color:rgb(71, 6, 124);">Quick and Simple Bio About Me</h2>
+    <h2 style="color:rgb(6, 43, 124);">Quick and Simple Bio About Me</h2>
     
 
     <p>
@@ -71,7 +83,7 @@
 
     </p>
 
-    <h3 style="color:rgb(71, 6, 124);">Pictures of me</h3>
+    <h3 style="color:rgb(6, 43, 124);">Pictures of me</h3>
 
     <img src="snow.jpg"></img>
     <img src="water.jpg"></img>
@@ -82,8 +94,17 @@
         <br>
         <br>
         
-    <h4 style="color:rgb(71, 6, 124);">For more information about my experiences, please check out my experience and resume section at the top.</h4>
+    <h4 style="color:rgb(6, 43, 124);">For more information about my experiences, please check out my experience and resume section at the top.</h4>
     
+    <script>
+        const body = document.querySelector('body');
+        const toggle = document.getElementById('toggle');
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            body.classList.toggle('active');
+        }
+    </script>
+
 </body>
 
 <footer>

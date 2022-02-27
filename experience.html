@@ -5,7 +5,14 @@
         <title>Ebun Adebesin's Portfolio</title>
         
         <link rel="stylesheet" href="styles.css">
-        <h1>Ebun Blessing Adebesin</h1>
+       <!--<script>
+            function darkMode() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            
+        </script>--> 
+        <h1>Experiences</h1>
     
     
     </head>
@@ -26,9 +33,14 @@
                         <a href= "experience.html"><span>Experience</span></a>
                     </li>
                     <li>
-                        <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"><span>Resume</span></a>
+                        <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"target="_blank" >Resume</a>
                     </li>
-    
+                    <li>
+                        <div id="toggle">
+            <i class="indicator"><span>mode</span></i>
+        </div>
+                    </li>
+                    <!--<span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
                 </ul>
             </nav>
     
@@ -41,10 +53,52 @@
     
         
         <p>
-            More Info coming soon!    
-    
+            Before coming into college, I had no coding experience or deep understanding about any programming language. It took some time to understand the basics of programming and how it is implemented.
+            <br>
+            After classes and tutorials and YouTube videos, I could say I am to an extent proficient in JAVA and C++, although I prefer JAVA.
+            <br>
+            I am currently learning Python and SQL. In addition, I am also learning C, HTML, CSS and JavaScript.
+            <br>
+            <br>
+           <li> All-In Program with Major League Hacking Fellowship, Virtual</li>
+           <ul>
+                  2021 - Present
+                  <br>
+            Design a website for my personal portfolio using GitHub pages and track commits through GitHub.
+           </ul>
+
+           More Experiences Coming Soon!
+           <br>
+
+           <h3>Projects</h3>
+           I love testing my knowledge and I have able to put some skills into practice with some projects I have worked on below
+           <br>
+           <ul>
+           <li>Created a Base Converter GUI that converts a number in any base to any base using JAVA</li>
+           <li>Developed a Password Checker GUI application implenting hashmap using JAVA</li>
+           <li>Created a Quizing GUI application usine JAVA</li>
+           <li>Developed a File manager GUI application using JAVA</li>
+           <li>Designed a Lottery Picker GUI application using JAVA</li>
+           <li>Created a Tabbed Pane Calculator GUI application using JAVA</li>
+           <li>Designed a Notepad GUI application using JAVA</li>
+           </ul>
+           <br>
+               <h4>Research Project</h4>
+           <ul>
+               <li>Using Python to collate and collect data on Health Disparities in minority communities</li>
+               <li>Researching a tool that can autogenerate new and existing API documentation for a developer</li>
+           </ul>
+
         </p>
     
+        <script>
+            const body = document.querySelector('body');
+            const toggle = document.getElementById('toggle');
+            toggle.onclick = function(){
+                toggle.classList.toggle('active');
+                body.classList.toggle('active');
+            }
+        </script>
     </body>
     
     <footer>

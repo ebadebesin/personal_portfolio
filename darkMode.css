@@ -1,0 +1,20 @@
+body.dark-mode{
+    background-color: rgb(24, 4, 54);
+    color: whitesmoke;
+
+}
+body.light-mode{
+    background-color: rgba(136, 165, 192, 0.63);
+    color: rgb(24, 4, 54);
+}
+
+button{
+   background-color: whitesmoke;
+   font-size: large;
+   border-radius: 50px;
+
+}
+body.light-mode button{
+    background-color: rgb(24, 4, 54);
+    font-size: large;
+}
