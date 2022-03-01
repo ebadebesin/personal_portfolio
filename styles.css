@@ -122,7 +122,6 @@ nav a:hover::before {
 footer a {
 	color: blueviolet;
 	padding: 1em;
-	align: center;
     text-align: center;
 }
 
@@ -135,6 +134,14 @@ footer {
 	margin-left: -2em;
 	margin-right: -2em;
 	padding: -1em;
+}
+footer.active{
+    background-color: blueviolet;
+    color:aqua;
+}
+footer a.active{
+    color:aqua;
+
 }
 /*body.dark-mode{
     background-color: rgb(24, 4, 54);
@@ -159,12 +166,12 @@ body.light-mode button{
 }*/
 
 #toggle{
-    position: relative;
+    position: fixed;
     float: right;
     display: block;
     color: rgb(68, 175, 207);
     text-align: center;
-    width: 50px;
+    width: 60px;
     height: 20px;
     border-radius: 30px;
     background-color: rgb(15, 15, 15);
@@ -184,7 +191,7 @@ body.light-mode button{
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
+    width: 30px;
     height: 20px;
     background: linear-gradient(to bottom, rgb(99, 98, 98), #222);
     border-radius: 50%;
@@ -195,7 +202,7 @@ body.light-mode button{
     transition: 0.5s;
 }
 #toggle.active.indicator{
-    left: 20px;
+    left: 30px;
     background: linear-gradient(to bottom,#eaeaea, #f9f9f9 );
     box-shadow: 0 8px 20px rgba(0,0,0,0.1),
                 inset 0 4px 4px rgba(255,255,255,1),
