@@ -4,19 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Ebun Adebesin's Portfolio</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     
+
+
+    <!-- Don't forget to include Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone"></script>
+
     <link rel="stylesheet" href="styles.css">
-    <h1>Ebun Blessing Adebesin</h1>
-
-   <!-- <script>
-        function darkMode() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        
-    </script>-->
-
-
+    
 </head>
 
 <header>
@@ -24,10 +22,12 @@
     
     
     <div class ="nav">
-        <img src = "PortLogo.png" alt="logo" class="logo">
+
+        <img src = "img/PortLogo.png" alt="logo" class="logo">
+
 
         <nav>
-            <ul id= "navlist">
+            <ul id= "navlist" class="nav-links">
                 <li>
                     <a href= "index.html"><span>Home</span> </a>
                 </li>
@@ -41,9 +41,8 @@
                     <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing" target="_blank" >Resume</a>
                 </li>
                 <li>
-                    <div id="toggle">
-        <i class="indicator"><span>mode</span></i>
-    </div>
+                    <div id="react-root"></div>
+                   
                 </li>
 
                <!-- <span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
@@ -57,8 +56,11 @@
     
 <body>
     
+    <h1>Ebun Blessing Adebesin</h1>
+
+
     
-    <img src="logo.jpg" alt="headShot" class="headShot"></img>
+    <img src="img/cutie2.png" alt="headShot" class="headShot"></img>
     
     <p>
 
@@ -77,29 +79,70 @@
 
 
     </p>
+      
 
 
+    
+    <script type="text/babel">
+        function DarkModeToggle() {
+            const [isDarkMode, setIsDarkMode] = React.useState(() => localStorage.getItem('darkMode') === 'enabled');
+            const [showTooltip, setShowTooltip] = React.useState(false);
 
-    <script>
-    // function darkmode(){
-        const body = document.querySelector('body');
-        const toggle = document.getElementById('toggle');
-        toggle.onclick = function(){
-            toggle.classList.toggle('active');
-            body.classList.toggle('active');
+            React.useEffect(() => {
+            document.body.classList.toggle('active', isDarkMode);
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+          }, [isDarkMode]);
+      
+          // Define styles for the moon and sun icons
+          const iconStyle = {
+            color: isDarkMode ? 'grey' : 'yellow', // Change color based on dark mode
+          };
+
+          // Define styles for the tooltip
+          const tooltipStyle = {
+            visibility: showTooltip ? 'visible' : 'hidden',
+            position: 'absolute',
+            backgroundColor: 'black',
+            color: 'white',
+            padding: '5px 10px',
+            borderRadius: '5px',
+            fontSize: '14px',
+            zIndex: 100,
+            top: '30px', // Adjust based on your layout
+            left: '50%',
+            transform: 'translateX(-50%)',
+            whiteSpace:'nowrap',
+          };
+      
+          return (
+            <div id="toggle"
+                 onMouseEnter={() => setShowTooltip(true)} 
+                 onMouseLeave={() => setShowTooltip(false)}
+                 onFocus={() => setShowTooltip(true)}
+                 onBlur={() => setShowTooltip(false)}
+                 tabIndex="0"> {/* Make sure it's focusable */}
+              <input
+                type="checkbox"
+                id="darkModeToggle"
+                className="checkbox"
+                checked={isDarkMode}
+                onChange={() => setIsDarkMode(!isDarkMode)}
+              />
+              <label htmlFor="darkModeToggle" className="label">
+                <i className="fas fa-moon" style={iconStyle}></i>
+                <i className="fas fa-sun" style={iconStyle}></i>
+                <div className="ball"></div>
+              </label>
+               <div style={tooltipStyle}>Dark/Light Mode</div>
+            </div>
+          );
         }
- 
-    </script>
-<!-- <script>
-    function theGreatest() {
-      var x = document.getElementById("nav");
-      if (x.className === "nav") {
-        x.className += "responsive";
-      } else {
-        x.className = "nav";
-      }
-    }
-</script> -->
+      
+        ReactDOM.render(<DarkModeToggle />, document.getElementById('react-root'));
+      </script>
+      
+    
+
 
 </body>
 
@@ -113,11 +156,5 @@
 
 </footer>
 
-<!--<script>
-    if(localStorage.getItem('toggle') === 'active') {
-      document.getElementById('themedark').setAttribute('id', 'themelight')
-      darkmode.value = 'Dark mode off'
-    }
-</script>-->
 
 </html>

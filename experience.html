@@ -3,23 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>Ebun Adebesin's Portfolio</title>
-        
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+        <!-- Don't forget to include Babel for JSX -->
+        <script src="https://unpkg.com/@babel/standalone"></script>
+
         <link rel="stylesheet" href="styles.css">
-       <!--<script>
-            function darkMode() {
-               var element = document.body;
-               element.classList.toggle("dark-mode");
-            }
-            
-        </script>--> 
-        <h1>Experiences</h1>
+
+      
     
     
     </head>
     
     <header>
         <div class ="nav">
-            <img src = "PortLogo.png" alt="logo" class="logo">
+            <img src = "img/PortLogo.png" alt="logo" class="logo">
     
             <nav>
                 <ul id= "navlist">
@@ -36,11 +36,19 @@
                         <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"target="_blank" >Resume</a>
                     </li>
                     <li>
-                        <div id="toggle">
+                        <div id="react-root"></div>
+                        <!-- <div id="toggle">
+                            <input type="checkbox" id="darkModeToggle" class="checkbox">
+                            <label for="darkModeToggle" class="label">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div> -->
+                        <!-- <div id="toggle">
             <i class="indicator"><span>mode</span></i>
-        </div>
+        </div> -->
                     </li>
-                    <!--<span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
                 </ul>
             </nav>
     
@@ -50,45 +58,43 @@
     
         
     <body>
-    
+        <h1>Experiences</h1>
+
+        <h2>Professional Development and Technical Proficiency</h2>
         
         <p>
-            Before coming into college, I had no coding experience or deep understanding about any programming language. 
-            It took some time to understand the basics of programming and how it is implemented.
+            My foray into programming began without prior experience; it was an exhilarating challenge that involved mastering the 
+            fundamentals through coursework, online tutorials, and countless hours of practice. My dedication has cultivated proficiency 
+            in Java and C++, with a preference for the former due to its widespread application and robust community support. 
+            Beyond these languages, my academic and personal pursuits have expanded my skill set to include Python, HTML, CSS, JavaScript and SQL, enhancing 
+            my capability in Web development, backend development, and data analysis. I am concurrently honing my skills in C, Swift, Go, R and lots more
+            aiming to develop a versatile expertise in software development.
             <br>
-            After classes and tutorials and YouTube videos, I could say I am to an extent proficient in JAVA and C++, although I prefer JAVA.
             <br>
-            I am currently learning Python and SQL. In addition, I am also learning C, HTML, CSS and JavaScript.
-            <br>
-            <br>
-            <li> Volunteer Technology Support Tutor, Vivalon. </li>
+            <li> <b>Volunteer Technology Support Tutor, Vivalon. </b></li>
             <ul>
                 August 2023 – Present
 
                 <br>
-                Facilitated one-on-one tech support sessions for older adults, empowering them to solve their tech problems and develop new digital 
-                skills and digital literacy
-                Demonstrated strong problem-solving skills by answering a wide range of technology questions while maintaining a client-first 
-                approach, empowering clients to perform tasks themselves.
-                Provided clear and patient guidance on a variety of technology topics, from basic computer skills to advanced troubleshooting.
-
+                In my role at Vivalon, I have had the privilege of conducting personalized tech support sessions for older adults, 
+                demystifying the complexities of digital technology. This role has not only solidified my problem-solving skills but also 
+                allowed me to foster digital literacy, ensuring that my clients can confidently navigate their tech challenges independently. 
+                By providing empathetic and patient guidance, I've facilitated their journey from tech novices to adept users.
                 
             </ul>
-        <li> Software Development Intern with Intel Corporation	
-</li>
+        <li> <b>Software Development Intern with Intel Corporation</b> </li>
         <ul>
             June 2022 – August 2022
 
             <br>
-            Performed security testing on systems with Fuzzers in C++ to identify vulnerabilities in code and implement the security functional 
-            requirements that led developers to adopt best practices, reducing the risk of potential hacking by approximately 80%
-Developed and delivered technical documentation for Fuzz testing to improve fuzzing engagement by 50% before 2024 across non-fuzzing teams and 
-            foster growth within the fuzzing community at Intel
-Leveraged a diverse array of assembly-level tools such as disassemblers and debuggers to effectively analyze compiled binary files, enabling 
-            detailed insight into their underlying code and structure. 
+            My internship at Intel Corporation was a deep dive into the world of cybersecurity and system vulnerabilities. I was involved in 
+            fuzz testing using C++, identifying and mitigating code vulnerabilities which significantly reduced the risk of security breaches. 
+            I contributed to creating technical documentation for security protocols, enhancing team-wide understanding and engagement in security 
+            best practices. Through the use of assembly-level debugging tools, I analyzed binary executables, revealing insights that fortified 
+            the integrity of our software.
             
         </ul>
-           <li> All-In Program with Major League Hacking Fellowship, Virtual</li>
+           <li> <b>All-In Program with Major League Hacking Fellowship, Virtual</b></li>
            <ul>
                   September 2021 – May 2022
 
@@ -103,42 +109,165 @@ Leveraged a diverse array of assembly-level tools such as disassemblers and debu
 
            </ul>
 
-           More Experiences Coming Soon!
-           <br>
+            <p>
+                I am continuously seeking new avenues to apply my growing technical expertise. The journey thus far has been a testament to my commitment to 
+                constant learning and my ambition to create technology that makes a tangible difference.
+            </p>
 
-           <h3>Projects</h3>
+          <b> More Experiences Coming Soon!</b>
+           <br>
+           <br>
+           <br>
+           <h2>Projects</h2>
            I love testing my knowledge and I have able to put some skills into practice with some projects I have worked on below
            <br>
+
            <ul>
+            <li>Project work has been a cornerstone of my practical experience, where I've taken concepts from ideation to execution. 
+                Notable is the Full-Stack Web Application developed during my Meta Developer Certification, where I deployed advanced Python programming 
+                skills and leveraged frameworks like Django to create a multifunctional application.
+            </li>
+            <br>
+            <br>
             <li> Developed a highly responsive website with visually appealing designs using HTML, CSS, and JavaScript, 
                 showcasing expertise in web development, git version control, user experience design, and search engine 
-                optimization to enhance the user journey and maximize online visibility.</li>
-
+                optimization to enhance the user journey and maximize online visibility.
+            </li>
+            <br>
+            <br>
            <li>Created a Base Converter GUI that converts a number in any base to any base using JAVA</li>
+           <br>
+            <br>
            <li>Developed a Password Checker GUI application implenting hashmap using JAVA</li>
+           <br>
+            <br>
            <li>Created a Quizing GUI application usine JAVA</li>
+           <br>
+            <br>
            <li>Developed a File manager GUI application using JAVA</li>
+           <br>
+            <br>
            <li>Designed a Lottery Picker GUI application using JAVA</li>
+           <br>
+            <br>
            <li>Created a Tabbed Pane Calculator GUI application using JAVA</li>
+           <br>
+            <br>
            <li>Designed a Notepad GUI application using JAVA</li>
+            <br>
            </ul>
            <br>
-               <h4>Research Project</h4>
+               <h3>Research Project</h3>
            <ul>
                <li>Using Python to collate and collect data on Health Disparities in minority communities</li>
                <li>Researching a tool that can autogenerate new and existing API documentation for a developer</li>
            </ul>
 
+           <h3>Pursuit of Continuous Learning and Impact</h3>
+
+           <ul>
+            Throughout my extracurricular engagements, including presiding over the HT Women in Technology and contributing as a member of 
+            the National Society of Black Engineers, I have sought to create platforms for learning and empowerment. My efforts are aimed at 
+            reducing the digital divide and fostering an inclusive environment where technology serves as a bridge rather than a barrier.
+            </ul>
+
+        <h3>A Dedication to Lifelong Learning and Growth</h3>
+
+            <ul>
+            The culmination of these experiences has shaped a steadfast dedication to lifelong learning and an unwavering ambition to make 
+            a meaningful imprint on the world through technology. I eagerly anticipate the opportunities to further apply and expand my expertise, 
+            seeking roles that challenge me to continue growing as both a technologist and an innovator.
+            </ul>
+
         </p>
     
-        <script>
-            const body = document.querySelector('body');
-            const toggle = document.getElementById('toggle');
-            toggle.onclick = function(){
-                toggle.classList.toggle('active');
-                body.classList.toggle('active');
+
+
+        <script type="text/babel">
+            function DarkModeToggle() {
+                const [isDarkMode, setIsDarkMode] = React.useState(() => localStorage.getItem('darkMode') === 'enabled');
+                const [showTooltip, setShowTooltip] = React.useState(false);
+    
+                React.useEffect(() => {
+                document.body.classList.toggle('active', isDarkMode);
+                localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+              }, [isDarkMode]);
+          
+              // Define styles for the moon and sun icons
+              const iconStyle = {
+                color: isDarkMode ? 'grey' : 'yellow', // Change color based on dark mode
+              };
+    
+              // Define styles for the tooltip
+              const tooltipStyle = {
+                visibility: showTooltip ? 'visible' : 'hidden',
+                position: 'absolute',
+                backgroundColor: 'black',
+                color: 'white',
+                padding: '5px 10px',
+                borderRadius: '5px',
+                fontSize: '14px',
+                zIndex: 100,
+                top: '30px', // Adjust based on your layout
+                left: '50%',
+                transform: 'translateX(-50%)',
+                whiteSpace:'nowrap',
+              };
+          
+              return (
+                <div id="toggle"
+                     onMouseEnter={() => setShowTooltip(true)} 
+                     onMouseLeave={() => setShowTooltip(false)}
+                     onFocus={() => setShowTooltip(true)}
+                     onBlur={() => setShowTooltip(false)}
+                     tabIndex="0"> {/* Make sure it's focusable */}
+                  <input
+                    type="checkbox"
+                    id="darkModeToggle"
+                    className="checkbox"
+                    checked={isDarkMode}
+                    onChange={() => setIsDarkMode(!isDarkMode)}
+                  />
+                  <label htmlFor="darkModeToggle" className="label">
+                    <i className="fas fa-moon" style={iconStyle}></i>
+                    <i className="fas fa-sun" style={iconStyle}></i>
+                    <div className="ball"></div>
+                  </label>
+                   <div style={tooltipStyle}>Dark/Light Mode</div>
+                </div>
+              );
             }
-        </script>
+          
+            ReactDOM.render(<DarkModeToggle />, document.getElementById('react-root'));
+          </script>
+
+
+
+
+        <!-- <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const toggleSwitch = document.querySelector('#darkModeToggle');
+        const currentMode = localStorage.getItem('darkMode');
+
+        if (currentMode === 'enabled') {
+        document.body.classList.add('active');
+        toggleSwitch.checked = true;
+        }
+
+        toggleSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('active');
+        localStorage.setItem('darkMode', document.body.classList.contains('active') ? 'enabled' : 'disabled');
+        });
+    
+    });
+            // const body = document.querySelector('body');
+            // const toggle = document.getElementById('toggle');
+            // toggle.onclick = function(){
+            //     toggle.classList.toggle('active');
+            //     body.classList.toggle('active');
+            // }
+        </script> -->
     </body>
     
     <footer>

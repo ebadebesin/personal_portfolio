@@ -5,7 +5,7 @@ body {
     font-family: Times 'Times New Roman', Times, serif, Helvetica, sans-serif;
     text-align: left;
     color:rgb(24, 4, 54);
-    background-color: rgba(136, 165, 192, 0.63);
+    background-color: rgba(247, 249, 251, 0.63);
     height: 125vh;  
     margin-top: 80px;  
     padding: 30px;  
@@ -55,6 +55,31 @@ header li a {
 }  
 
 
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+
+}
+
+
+
+
+
 .logo {
     float: left;
     height: 50px;
@@ -63,8 +88,9 @@ header li a {
 }
 .headShot{
     height: 300px;
-    padding-left: 5vh;
-    border-radius: 30px;
+    /* padding-left: 5vh;
+    padding-right: 5vh; */
+    border-radius: 50px;
 }
 
 img {
@@ -90,14 +116,29 @@ nav li{
     
 }
 
+#navlist {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navlist li {
+    margin-right: 20px; /* Adjust based on your spacing needs */
+}
+
 nav a{
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
     
 }
+
+nav a.active{
+    
+}
 nav a:hover {
-    color: #000;
+    color: #b594f8;
 }
 
 nav a::before {
@@ -118,6 +159,12 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+
+#react-root{
+    margin-left: auto;
+}
+
 
 footer a {
 	color: blueviolet;
@@ -143,69 +190,69 @@ footer a.active{
     color:aqua;
 
 }
-/*body.dark-mode{
-    background-color: rgb(24, 4, 54);
-    color: whitesmoke;
 
-}
-body.light-mode{
-    background-color: rgba(136, 165, 192, 0.63);
-    color: rgb(24, 4, 54);
-}
 
-button{
-   background-color: whitesmoke;
-   font-size: large;
-   border-radius: 50px;
-   right: 0;  
 
-}
-body.light-mode button{
-    background-color: rgb(24, 4, 54);
-    font-size: large;
-}*/
-
-#toggle{
-    position: fixed;
-    float: right;
-    display: block;
-    color: rgb(68, 175, 207);
-    text-align: center;
-    width: 60px;
-    height: 20px;
-    border-radius: 30px;
-    background-color: rgb(15, 15, 15);
-    transition: 0.5s;
-    cursor: pointer;
-    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-                inset 0 8px 8px rgba(0,0,0,0.1),
-                inset 0 -4px 4px rgba(0,0,0,0.1);
-}
-#toggle.active{
-    background: #fff;
-    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
-                inset 0 2px 8px rgba(0,0,0,0.1),
-                inset 0 -4px 8px rgba(0,0,0,0.05);
-}
-#toggle.indicator{
+.checkbox {
+    opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 20px;
-    background: linear-gradient(to bottom, rgb(99, 98, 98), #222);
-    border-radius: 50%;
-    transform: scale(0.9);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.1),
-                inset 0 4px 4px rgba(255, 255, 255, 0.267),
-                inset 0 -4px 4px rgba(255, 255, 255, 0.253);
-    transition: 0.5s;
 }
-#toggle.active.indicator{
-    left: 30px;
-    background: linear-gradient(to bottom,#eaeaea, #f9f9f9 );
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1),
-                inset 0 4px 4px rgba(255,255,255,1),
-                inset 0 -4px 4px rgba(255,255,255,1);
 
+.label {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    width: 40px;
+    height: 16px;
+    border-radius: 30px;
 }
+
+.label i {
+    color: #fff;
+}
+
+
+.ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s linear;
+}
+.ball:active{
+    background-color: #111;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+/* Add styles for dark mode elements */
+body.active {
+    /* Your dark mode styles, e.g., */
+    background-color: #333;
+    color: #fff;
+}
+
+/* Other styles for active dark mode */
+
+.label:hover:active {
+    border: 0px solid #1292e1;
+    background: rgb(49, 14, 244);
+    color: white !important;
+    content: "Completed!" !important;
+   }
+  
+ .label:active {
+    background: #1292e1;
+    color: white;
+    text-decoration: none !important; 
+    
+   }
+

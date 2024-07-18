@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 
 <head>
     <meta charset="utf-8">
     <title>Ebun Adebesin's Portfolio</title>
-    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Don't forget to include Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone"></script>
+
     <link rel="stylesheet" href="styles.css">
-    <!--<script>
-        function darkMode() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        
-    </script>-->
-    <h1>About</h1>
-
-
+ 
 </head>
 
+
 <header>
+
+    
     <div class ="nav">
-        <img src = "PortLogo.png" alt="logo" class="logo">
+        <img src = "img/PortLogo.png" alt="logo" class="logo">
 
         <nav>
             <ul id= "navlist">
@@ -34,12 +34,22 @@
                     <a href= "experience.html"><span>Experience</span></a>
                 </li>
                 <li>
-                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing"target="_blank" >Resume</a>
+                    <a href= "https://docs.google.com/document/d/1MzTxDJN3MNJuA2jzph93GHmo3Z8DDfoT0g0GXCOQxgw/edit?usp=sharing" target= "_blank" >Resume</a>
                 </li>
                 <li>
-                    <div id="toggle">
+                    <div id="react-root"></div>
+                    <!-- <div id="toggle">
+                        <input type="checkbox" id="darkModeToggle" class="checkbox">
+                        <label for="darkModeToggle" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div> -->
+                    
+                    <!-- <div id="toggle">
         <i class="indicator"><span>mode</span></i>
-    </div>
+    </div> -->
                 </li>
                 <!--<span style = "position: relative; top: 10px; left: 20px;"><button onclick="darkMode()">Mode</button></span>-->
             </ul>
@@ -51,9 +61,9 @@
 
     
 <body>
+    <h1>About</h1>
 
-
-    <h2 style="color:rgb(6, 43, 124);">Quick and Simple Bio About Me</h2>
+    <h2>Quick and Simple Bio About Me</h2>
     
 
     <p>
@@ -61,6 +71,9 @@
         <br>
         My name is Ebunoluwa Blessing Adebesin, but most times I go by Ebun or Blessing. 
        I am a Recent College Graduate! I majored in Computer science with a minor in Mathematics at Huston Tillotson University, which is the first HBCU in Austin, Texas.
+       This fall, I will be joining Northeastern University to pursue a Masters Degree in Information Sysytems.
+       <br>
+       
 My interests include software engineering, problem solving, data analysis, and management. Looking for a full-time position at a company where I can use my knowledge to 
         solve real world problems, enhance the company's products and services, and further develop my abilities to deliver the best of the best. I love Computer Science 
         and the broad opportunities it has to offer! Long-term, I hope to use my degree, skills and experiences to bring technology closer to the less priviledge.
@@ -73,7 +86,7 @@ My interests include software engineering, problem solving, data analysis, and m
 
 <h2>Hobbies</h2>
 
-    </p>
+    <p>
         <br>
         I am an avid learner, a team player and creative leader who has an interest to pursue a career in the Tech field, because I want to be adaptable 
         and thrive in an atmosphere that is always developing and intellectually stimulating.
@@ -83,28 +96,91 @@ My interests include software engineering, problem solving, data analysis, and m
         I have a new found interest in painting which I use most times to de-stress.  
 
     </p>
+    <br>
+    <br>
 
-    <h3 style="color:rgb(6, 43, 124);">Pictures of me</h3>
+    <h3>Picture Gallery</h3>
 
-    <img src="snow.jpg"></img>
-    <img src="water.jpg"></img>
+    <p>
 
+    <img src="img/snow.jpg" alt="imag" ></img>
+    <img src="img/water.jpg" alt="imag" ></img>
+    <img src="img/cutie1.png" alt="imag" ></img>
+    <img src="img/cutie2.png" alt="imag" ></img>
+    <img src="img/cutie3.png" alt="imag" ></img>
+    
+    </p>
 
         <br>
         <br>
         <br>
         <br>
         
-    <h4 style="color:rgb(6, 43, 124);">For more information about my experiences, please check out my experience and resume section at the top.</h4>
+    <h4>For more information about my experiences, please check out my experience and resume section at the top.</h4>
     
-    <script>
-        const body = document.querySelector('body');
-        const toggle = document.getElementById('toggle');
-        toggle.onclick = function(){
-            toggle.classList.toggle('active');
-            body.classList.toggle('active');
+    
+    
+    
+    <script type="text/babel">
+        function DarkModeToggle() {
+            const [isDarkMode, setIsDarkMode] = React.useState(() => localStorage.getItem('darkMode') === 'enabled');
+            const [showTooltip, setShowTooltip] = React.useState(false);
+
+            React.useEffect(() => {
+            document.body.classList.toggle('active', isDarkMode);
+            localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+          }, [isDarkMode]);
+      
+          // Define styles for the moon and sun icons
+          const iconStyle = {
+            color: isDarkMode ? 'grey' : 'yellow', // Change color based on dark mode
+          };
+
+          // Define styles for the tooltip
+          const tooltipStyle = {
+            visibility: showTooltip ? 'visible' : 'hidden',
+            position: 'absolute',
+            backgroundColor: 'black',
+            color: 'white',
+            padding: '5px 10px',
+            borderRadius: '5px',
+            fontSize: '14px',
+            zIndex: 100,
+            top: '30px', // Adjust based on your layout
+            left: '50%',
+            transform: 'translateX(-50%)',
+            whiteSpace:'nowrap',
+          };
+      
+          return (
+            <div id="toggle"
+                 onMouseEnter={() => setShowTooltip(true)} 
+                 onMouseLeave={() => setShowTooltip(false)}
+                 onFocus={() => setShowTooltip(true)}
+                 onBlur={() => setShowTooltip(false)}
+                 tabIndex="0"> {/* Make sure it's focusable */}
+              <input
+                type="checkbox"
+                id="darkModeToggle"
+                className="checkbox"
+                checked={isDarkMode}
+                onChange={() => setIsDarkMode(!isDarkMode)}
+              />
+              <label htmlFor="darkModeToggle" className="label">
+                <i className="fas fa-moon" style={iconStyle}></i>
+                <i className="fas fa-sun" style={iconStyle}></i>
+                <div className="ball"></div>
+              </label>
+               <div style={tooltipStyle}>Dark/Light Mode</div>
+            </div>
+          );
         }
-    </script>
+      
+        ReactDOM.render(<DarkModeToggle />, document.getElementById('react-root'));
+      </script>
+
+    
+
 
 </body>
 
